@@ -17,9 +17,11 @@ console.log(calcArea (10, 50));
 console.log(calcArea (5, 2));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let result = string.split(" ")
+  return result
 }
+console.log(splitSentence('go trybe'));
 
 // Desafio 4
 function concatName() {
@@ -27,9 +29,19 @@ function concatName() {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  if (wins === true) {
+    return wins ++
+  } else if (ties === true) {
+    return ties ++
+  }
+  let points = (wins * 3) + ties;
+  return points;
 }
+
+console.log(footballPoints(14, 8));
+console.log(footballPoints(1, 2));
+console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount() {
