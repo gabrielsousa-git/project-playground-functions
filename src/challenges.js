@@ -51,7 +51,7 @@ console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount(numbers) {
-  let biggestNumber = 0;
+  let biggestNumber = -10;
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] > biggestNumber) {
       biggestNumber = numbers[index];
@@ -61,23 +61,34 @@ function highestCount(numbers) {
   for (let index2 = 0; index2 < numbers.length; index2 += 1) {
    if (biggestNumber === numbers[index2]) {
        result += 1
+       console.log(result);
     }
   }
-  return biggestNumber
+  console.log(result);
+  return result;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
-console.log(highestCount([0, 0, 0]));
-
+highestCount([9, 1, 2, 3, 9, 5, 7])
+// console.log();
+// console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
+// console.log(highestCount([0, 0, 0]));
+// console.log(highestCount([-2, -2, -1]));
 
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
 }
-console.log(catAndMouse);
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+let result = [0]
+function fizzBuzz(numbers) {
+  for (index = 0; index<numbers.length; index += 1) {
+    if (numbers % 3 === 0) {
+      result = 'fizz';
+    } else if (numbers % 5 === 0) {
+      result = 'buzz';
+    } else if (numbers % 3 === 0 && numbers % 5 === 0) {
+      result = 'fizzBuzz';
+    } else ()
+  }
 }
 
 // Desafio 9
