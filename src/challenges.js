@@ -51,7 +51,7 @@ console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount(numbers) {
-  let biggestNumber = -10;
+  let biggestNumber = -Infinity;
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] > biggestNumber) {
       biggestNumber = numbers[index];
@@ -61,42 +61,56 @@ function highestCount(numbers) {
   for (let index2 = 0; index2 < numbers.length; index2 += 1) {
    if (biggestNumber === numbers[index2]) {
        result += 1
-       console.log(result);
     }
   }
-  console.log(result);
   return result;
 }
-highestCount([9, 1, 2, 3, 9, 5, 7])
-// console.log();
-// console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
-// console.log(highestCount([0, 0, 0]));
-// console.log(highestCount([-2, -2, -1]));
+
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
+console.log(highestCount([0, 0, 0]));
+console.log(highestCount([-2, -2, -1]));
 
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
 }
 // Desafio 8
-let result = [0]
 function fizzBuzz(numbers) {
-  for (index = 0; index<numbers.length; index += 1) {
-    if (numbers % 3 === 0) {
-      result = 'fizz';
-    } else if (numbers % 5 === 0) {
-      result = 'buzz';
-    } else if (numbers % 3 === 0 && numbers % 5 === 0) {
-      result = 'fizzBuzz';
-    } else ()
-  }
+  let result = [];
+  for (index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
+      result.push('fizzBuzz');
+    } else if (numbers[index] % 5 === 0) {
+      result.push('buzz');
+    } else if (numbers[index] % 3 === 0) {
+      result.push('fizz');
+    } else if (numbers[index] % 3 !== 0 || numbers[index] % 5 !== 0) {
+      result.push('bug!');
+    }
+  } 
+  return result;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
+function encode(vogais) {
+  let newPhrase = vogais.replaceAll('a', '1');
+  let newPhrase1 = newPhrase.replaceAll('e', '2');
+  let newPhrase2 = newPhrase1.replaceAll('i', '3');
+  let newPhrase3 = newPhrase2.replaceAll('o', '4');
+  let result = newPhrase3.replaceAll('u', '5');
+
+  return result;
+} 
+
+function decode(numeros) {
+  let newPhrase = numeros.replaceAll('1', 'a');
+  let newPhrase1 = newPhrase.replaceAll('2', 'e');
+  let newPhrase2 = newPhrase1.replaceAll('3', 'i');
+  let newPhrase3 = newPhrase2.replaceAll('4', 'o');
+  let result = newPhrase3.replaceAll('5', 'u');
+
+  return result;
 }
 
 // Desafio 10
