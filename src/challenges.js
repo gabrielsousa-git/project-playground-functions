@@ -13,26 +13,17 @@ function calcArea(base, height) {
   return areaTriangle;
 }
 
-console.log(calcArea (10, 50));
-console.log(calcArea (5, 2));
-
 // Desafio 3
 function splitSentence(string) {
   let result = string.split(" ")
   return result
 }
-console.log(splitSentence('go trybe'));
-console.log(splitSentence('vamo que vamo'));
-console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName(array) {
   let concat = array[array.length -1] + ", " + array[0];
   return concat;
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
-console.log(concatName(['foguete', 'não', 'tem', 'ré']));
-console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -44,10 +35,6 @@ function footballPoints(wins, ties) {
   let points = (wins * 3) + ties;
   return points;
 }
-
-console.log(footballPoints(14, 8));
-console.log(footballPoints(1, 2));
-console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount(numbers) {
@@ -66,15 +53,19 @@ function highestCount(numbers) {
   return result;
 }
 
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
-console.log(highestCount([0, 0, 0]));
-console.log(highestCount([-2, -2, -1]));
-
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  const distCat1FromMouse = Math.abs(cat1 - mouse);
+  const distCat2FromMouse = Math.abs(cat2 - mouse);
+  if (distCat1FromMouse < distCat2FromMouse) {
+    return 'cat1'
+  } else if (distCat2FromMouse < distCat1FromMouse) {
+    return 'cat2'
+  } else {
+    return 'os gatos trombam e o rato foge'
+  }
 }
+
 // Desafio 8
 function fizzBuzz(numbers) {
   let result = [];
@@ -114,8 +105,19 @@ function decode(numeros) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, string) {
+  array = array.sort();
+  if (array != '') {
+    for (let key in array) {
+      array[key] = {
+        tech: array[key],
+        name: string
+      }
+    }
+  } else {
+    return 'Vazio!'
+  }
+return array;
 }
 
 module.exports = {
